@@ -1,0 +1,24 @@
+{
+  "originHash" : "1bb92f48595f88b2766fcad2507d6e558c66bc34faac8b6b95de33392c9c4f4e",
+  "pins" : [
+    {
+      "identity" : "swift-json-schema",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ajevans99/swift-json-schema",
+      "state" : {
+        "revision" : "6e33690b8b744352bf24440149acaf629a2ed44e",
+        "version" : "0.10.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "4799286537280063c85a32f09884cfbca301b1a1",
+        "version" : "602.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -5,6 +5,14 @@ import PackageDescription
 
 let package = Package(
     name: "Dietary",
+    platforms: [
+      .macOS(.v13),
+      .iOS(.v16),
+      .watchOS(.v9),
+      .tvOS(.v16),
+      .macCatalyst(.v16),
+      .visionOS(.v1),
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -12,11 +20,18 @@ let package = Package(
             targets: ["Dietary"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/ajevans99/swift-json-schema", from: "0.2.1")
+        ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Dietary"
+            name: "Dietary",
+            dependencies: [
+                  .product(name: "JSONSchema", package: "swift-json-schema"),
+                  .product(name: "JSONSchemaBuilder", package: "swift-json-schema"),
+                ]
         ),
         .testTarget(
             name: "DietaryTests",

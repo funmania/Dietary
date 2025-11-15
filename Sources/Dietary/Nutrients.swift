@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JSONSchemaBuilder
 
 public protocol Nutrient {
     var name: String { get }
@@ -13,6 +14,8 @@ public protocol Nutrient {
     var dietarySourcesRanked: [String] { get }
 }
 
+
+@Schemable
 public enum NutrientType: String, CaseIterable {
     // Vitamins
     case vitaminA, vitaminB1, vitaminB2, vitaminB3, vitaminB5, vitaminB6, vitaminB7, vitaminB9, vitaminB12

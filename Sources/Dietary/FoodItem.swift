@@ -1,6 +1,7 @@
 import Foundation
+import JSONSchemaBuilder
 
-@GenerateJSONSchema
+@Schemable
 public struct FoodItem {
     
     /// The common name of the food (e.g., "Apple", "Chicken Breast").

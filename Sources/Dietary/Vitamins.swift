@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JSONSchemaBuilder
 
 // MARK: - Supporting Types
 
@@ -14,6 +15,7 @@ public enum Solubility: String, Codable {
     case fatSoluble
 }
 
+@Schemable
 public struct Amount: Codable, CustomStringConvertible {
     public let value: Double
     public let unit: String
